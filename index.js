@@ -16,6 +16,10 @@ app.use(cors({ origin: '*' }))
 
 // The app.get functions below are being processed in Node.js running on the server.
 // Implement a custom About page.
+app.get('/api', (req, res) => {
+	res.json({ message: 'Hello from the Node.js API!' });
+  });
+
 app.get('/about', (request, response) => {
 	console.log('Calling "/about" on the Node.js server.')
 	response.type('text/plain')
